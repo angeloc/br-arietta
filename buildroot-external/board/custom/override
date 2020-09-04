@@ -1,0 +1,2 @@
+PWM_GPIO_OVERRIDE_SRCDIR=../../../pwm-gpio/
+SERVO_PWM_OVERRIDE_SRCDIR=../../../servo-pwm/

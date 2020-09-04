@@ -80,4 +80,20 @@
 			status = "okay";
 		};
 	};
+
+
+	pwm: pwm@0 {
+		compatible = "pwm-gpio";
+		pwm-gpio = <&pioB 8 GPIO_ACTIVE_HIGH>;
+		#pwm-cells = <2>;
+	};
+
+	servo: servo@0 {
+		compatible = "servo-pwm";
+		pwms = <&pwm 0 2000000>;
+		duty-0 = <60000>;
+		duty-180 = <260000>;
+		angle = <90>;
+	};
+
 };
